@@ -9,7 +9,7 @@ portes[hiddenCar] = car // mettre notre voiture derriere l'une des portes
 
 do {
   console.log(`===============================NEW GAME===============================`)
-  //console.log(portes)
+  console.log(portes)
 
 
   let playerChoice = readlineSync.keyIn('\nChoisissez une porte ? 1, 2 ou 3\n press 0 to exit game\n >', { limit: ['$<1-3>', '0'] })
@@ -19,6 +19,7 @@ do {
     console.log(chalk.yellow(`\nA bientot !`))
     process.exit(0)
   }
+  console.clear()
 
   playerChoice -= 1
 
@@ -41,4 +42,6 @@ do {
     console.log(chalk.red(`\nDommage pour la voiture mais vous ne repartez pas les mains vides,\nvous avez quand meme gagné cette superbe biquette MMMéééééééé !!!!!`))
   }
 
+
 } while (readlineSync.keyInYN('\nVoulez-vous rejouer ? '))
+
